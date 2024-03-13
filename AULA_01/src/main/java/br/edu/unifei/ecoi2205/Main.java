@@ -16,6 +16,7 @@ public class Main {
                 0,
                 motor);
 
+        System.out.println(vehicle);
         vehicle.start();
         vehicle.travelBy(2000);
         vehicle.stop();

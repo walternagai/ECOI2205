@@ -1,11 +1,11 @@
 package br.edu.unifei.ecoi2205.vehicle;
 
 public class Vehicle implements IVehicleOperations {
-    private String brand;
-    private String model;
-    private int wheelsNumber;
+    private final String brand;
+    private final String model;
+    private final int wheelsNumber;
     private float mileage;
-    private Motor motor;
+    private final Motor motor;
 
     public Vehicle(String brand, String model, int wheelsNumber, float mileage, Motor motor) {
         this.brand = brand;
