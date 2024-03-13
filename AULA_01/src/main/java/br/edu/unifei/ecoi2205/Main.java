@@ -10,9 +10,12 @@ public class Main {
             TO-DO:
          */
         Motor motor = new Motor(4, 100, 50, Fuel.GAS, 50);
-        Vehicle vehicle = new Vehicle("Apple", "Silverbullet", 4, 0, motor);
+        Vehicle vehicle = new Vehicle("Apple",
+                "Silverbullet",
+                4,
+                0,
+                motor);
 
-        System.out.print(vehicle);
         vehicle.start();
         vehicle.travelBy(2000);
         vehicle.stop();
