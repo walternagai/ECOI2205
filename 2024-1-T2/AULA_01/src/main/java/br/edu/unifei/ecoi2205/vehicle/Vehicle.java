@@ -14,4 +14,44 @@ public class Vehicle implements IVehicleOperations {
         this.mileage = mileage;
         this.motor = motor;
     }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getWheelsNumber() {
+        return wheelsNumber;
+    }
+
+    public float getMileage() {
+        return mileage;
+    }
+
+    public void setMileage(float mileage) {
+        this.mileage = mileage;
+    }
+
+    public Motor getMotor() {
+        return motor;
+    }
+
+    @Override
+    public void start() {
+        System.out.println("Starting " + this.getModel());
+    }
+
+    @Override
+    public void travelBy(float miles) {
+        this.setMileage(this.getMileage() + miles);
+        System.out.println("Go through " + miles + " miles");
+    }
+
+    @Override
+    public void stop() {
+        System.out.println("Stopping " + this.getModel());
+    }
 }
