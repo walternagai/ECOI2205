@@ -1,6 +1,6 @@
 # ECOI2205
 
-Repositório de projetos em linguagem Java da disciplina **ECOI2205** - **Programação Orientada a Objetos** ministrada pelo prof. Walter Aoiama Nagai.
+Repositório de projetos em linguagem Java da disciplina **ECOI2205** - **Programação Orientada a Objetos** ministrada pelo prof. Walter Aoiama Nagai na Universidade Federal de Itajubá - Campus Itabira.
 
 As pastas estão organizadas por ano e semestre e por turma. 
 
