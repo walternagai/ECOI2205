@@ -9,5 +9,9 @@ public class Main {
         /*
             TO-DO:
          */
+        Vehicle vehicle = new Vehicle("Ford", "Fiesta",
+                4, 0, new Motor(1600, 100, 50, Fuel.GAS, 100));
+
+        System.out.println(vehicle);
     }
 }

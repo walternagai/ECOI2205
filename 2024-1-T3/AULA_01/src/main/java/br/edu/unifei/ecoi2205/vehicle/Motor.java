@@ -1,11 +1,11 @@
 package br.edu.unifei.ecoi2205.vehicle;
 
 public class Motor {
-    private int cylinders;
-    private int potency;
-    private float fuelLiters;
-    private Fuel type;
-    private float fuelConsumption;
+    private final int cylinders;
+    private final int potency;
+    private final float fuelLiters;
+    private final Fuel type;
+    private final float fuelConsumption;
 
     public Motor(int cylinders, int potency, float fuelLiters, Fuel type, float fuelConsumption) {
         this.cylinders = cylinders;
@@ -13,5 +13,9 @@ public class Motor {
         this.fuelLiters = fuelLiters;
         this.type = type;
         this.fuelConsumption = fuelConsumption;
+    }
+
+    public float getFuelConsumption() {
+        return fuelConsumption;
     }
 }
