@@ -5,6 +5,7 @@ public class Vehicle implements IVehicleOperations {
     private final String model;
     private final int wheelsNumber;
     private float mileage;
+    private float parcialMileage;
     private final Motor motor;
 
     public Vehicle(String brand, String model, int wheelsNumber, float mileage, Motor motor) {
@@ -12,7 +13,23 @@ public class Vehicle implements IVehicleOperations {
         this.model = model;
         this.wheelsNumber = wheelsNumber;
         this.mileage = mileage;
+        this.parcialMileage = 0;
         this.motor = motor;
+    }
+
+    @Override
+    public void start() {
+        System.out.println("Starting " + this.getModel());
+    }
+
+    @Override
+    public void travelBy(float miles) {
+        this.parcialMileage += miles;
+    }
+
+    @Override
+    public void stop() {
+        System.out.println("Stopping " + this.getModel());
     }
 
     public String getBrand() {
@@ -39,19 +56,22 @@ public class Vehicle implements IVehicleOperations {
         return motor;
     }
 
-    @Override
-    public void start() {
-        System.out.println("Starting " + this.getModel());
+    public float consumptionByMileage() {
+        return this.parcialMileage / motor.getFuelConsumption();
+    }
+
+    public float totalMileage() {
+        this.setMileage(this.getMileage() + this.parcialMileage);
+        this.parcialMileage = 0;
+        return this.getMileage();
     }
 
     @Override
-    public void travelBy(float miles) {
-        this.setMileage(this.getMileage() + miles);
-        System.out.println("Go through " + miles + " miles");
-    }
-
-    @Override
-    public void stop() {
-        System.out.println("Stopping " + this.getModel());
+    public String toString() {
+        return "Vehicle{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", mileage=" + mileage +
+                '}';
     }
 }
